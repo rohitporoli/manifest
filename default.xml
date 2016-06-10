@@ -9,16 +9,16 @@
   <remote  name="cm"
            fetch="https://github.com/CyanogenMod"
            revision="refs/heads/cm-13.0" />
+		   
+  <remote  name="ctr"
+           fetch="https://github.com/Citrus-CAF"
+           revision="ctr6.0" />
 	
   <remote  name="aosp-caf"
            fetch="https://github.com/AOSP-CAF"
            revision="refs/heads/mm6.0" />
 
 <!-- BEGIN AOSP-CAF -->
-  <project name="platform_manifest" path="manifest" remote="aosp-caf" />
-  <project name="platform_build" path="build" remote="aosp-caf" >
-  <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
   <project name="device_qcom_common" path="device/qcom/common" remote="aosp-caf" />
   <project name="device_qcom_sepolicy" path="device/qcom/sepolicy" remote="aosp-caf" />
   <project name="platform_art" path="art" remote="aosp-caf" />
@@ -51,7 +51,6 @@
   <project name="platform_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="aosp-caf" />
   <project name="platform_external_zlib" path="external/zlib" remote="aosp-caf" />
   <project name="platform_frameworks_av" path="frameworks/av" remote="aosp-caf" />
-  <project name="platform_frameworks_base" path="frameworks/base" remote="aosp-caf" />
   <project name="platform_frameworks_native" path="frameworks/native" remote="aosp-caf" />
   <project name="platform_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="aosp-caf" />
   <project name="platform_hardware_libhardware" path="hardware/libhardware" remote="aosp-caf" />
@@ -64,7 +63,6 @@
   <project name="platform_hardware_ril" path="hardware/ril" remote="aosp-caf" />
   <project name="platform_hardware_ril" path="hardware/ril-caf" revision="mm6.0-caf" remote="aosp-caf" />
   <project name="platform_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="aosp-caf" />
-  <project name="platform_packages_apps_Settings" path="packages/apps/Settings" remote="aosp-caf" />
   <project name="platform_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" remote="aosp-caf" />
   <project name="platform_packages_providers_MediaProvider" path="packages/providers/MediaProvider" remote="aosp-caf" />
   <project name="platform_packages_services_Telephony" path="packages/services/Telephony" remote="aosp-caf" />
@@ -73,7 +71,6 @@
   <project name="platform_system_media" path="system/media" remote="aosp-caf" />
   <project name="platform_system_vold" path="system/vold" remote="aosp-caf" /> 
   <project name="platform_system_qcom" path="system/qcom" remote="aosp-caf" />
-  <project name="platform_vendor_aosp" path="vendor/aosp" remote="aosp-caf" />
   <project name="platform_vendor_qcom-opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="aosp-caf" />
   <project name="platform_vendor_qcom-opensource_dpm" path="vendor/qcom/opensource/dpm" remote="aosp-caf" />
   <project name="platform_vendor_qcom-opensource_fm" path="vendor/qcom/opensource/fm" remote="aosp-caf" />
@@ -456,5 +453,14 @@
   <project name="platform/vendor/qcom-opensource/rcs-service" path="vendor/qcom/opensource/rcs-service"/>
   <project name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services"/>
 <!-- END CODEAURORA -->
+
+  <!-- Citrus-CAF STARTS -->
+  <project path="build" name="build" remote="ctr" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="frameworks/base" name="frameworks_base" remote="ctr" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="ctr" />
+  <project path="vendor/citrus" name="vendor_citrus" remote="ctr" />
+  <project path="manifest" name="manifest" remote="ctr" />
 
 </manifest>
