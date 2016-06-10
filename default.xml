@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="git://codeaurora.org/" name="caf" review="codeaurora.org"/>
-  <default remote="caf" revision="LA.BR.1.2.7_rb1.20"/>
+  <remote fetch="git://codeaurora.org/" 
+    name="caf" 
+    review="codeaurora.org"/>
+  <default remote="caf" 
+    revision="LA.BR.1.2.7_rb1.20"
+    sync-c="true" 
+    sync-j4="true"/>
 
   <remote  name="github"
            fetch="https://github.com" />
 
   <remote  name="cm"
            fetch="https://github.com/CyanogenMod"
-           revision="refs/heads/cm-13.0" />
+           revision="refs/heads/cm-13.0"
+           sync-c="true"
+           sync-j4="true" />
 		   
   <remote  name="ctr"
            fetch="https://github.com/Citrus-CAF"
@@ -16,7 +23,9 @@
 	
   <remote  name="aosp-caf"
            fetch="https://github.com/AOSP-CAF"
-           revision="refs/heads/mm6.0" />
+           revision="refs/heads/mm6.0" 
+           sync-c="true" 
+           sync-j4="true"/>
 
 <!-- BEGIN AOSP-CAF -->
   <project name="device_qcom_common" path="device/qcom/common" remote="aosp-caf" />
@@ -51,7 +60,6 @@
   <project name="platform_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="aosp-caf" />
   <project name="platform_external_zlib" path="external/zlib" remote="aosp-caf" />
   <project name="platform_frameworks_av" path="frameworks/av" remote="aosp-caf" />
-  <project name="platform_frameworks_native" path="frameworks/native" remote="aosp-caf" />
   <project name="platform_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="aosp-caf" />
   <project name="platform_hardware_libhardware" path="hardware/libhardware" remote="aosp-caf" />
   <project name="platform_hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="aosp-caf" />
@@ -464,5 +472,9 @@
   <project path="manifest" name="manifest" remote="ctr" />
   <project path="packages/apps/DUI" name="platform_packages_apps_DUI" remote="ctr" revision="ctr6.0" />
   <project path="external/DUtils" name="platform_external_DUtils" remote="ctr" revision="ctr6.0" />
+  <project name="frameworks_native" path="frameworks/native" remote="ctr" />
+  <project path="packages/apps/ThemeChooser" name="packages_apps_ThemeChooser" remote="ctr" />
+  <project path="packages/providers/ThemesProvider" name="packages_providers_ThemesProvider" remote="ctr" />  
+  <!--CitrusCAF ENDS-->
 
 </manifest>
