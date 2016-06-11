@@ -470,8 +470,8 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="ctr" />
   <project path="vendor/citrus" name="vendor_citrus" remote="ctr" />
   <project path="manifest" name="manifest" remote="ctr" />
-  <project path="packages/apps/DUI" name="platform_packages_apps_DUI" remote="ctr" revision="ctr6.0" />
-  <project path="external/DUtils" name="platform_external_DUtils" remote="ctr" revision="ctr6.0" />
+  <project path="packages/apps/DUI" name="packages_apps_DUI" remote="ctr" revision="ctr6.0" />
+  <project path="external/DUtils" name="external_DUtils" remote="ctr" revision="ctr6.0" />
   <project name="frameworks_native" path="frameworks/native" remote="ctr" />
   <project path="packages/apps/ThemeChooser" name="packages_apps_ThemeChooser" remote="ctr" />
   <project path="packages/providers/ThemesProvider" name="packages_providers_ThemesProvider" remote="ctr" />  
