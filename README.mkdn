@@ -20,7 +20,16 @@ To initialize your local repository, use this command:
 
 Time to sync up our shit! [I love this part]:
 
-	repo sync
+	repo sync -c -f -j8 --force-sync --no-clone-bundle --no-tags
+
+Compiling the source!
+---------------------
+	. build/envsetup.sh
+	lunch citrus_device-userdebug
+	make lemonade -j#
 
 Don't worry about the name! Yeah, we're not as sour as we sound! That gadget, over there, right in your arms, might die tasting citrus xD
+.
+.
+.
 JK!
